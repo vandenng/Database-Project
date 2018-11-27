@@ -7,6 +7,65 @@ CIS 353 - Database Design Project
 
 --< The SQL/DDL code that creates your schema >
 
+--
+-- Drop the tables
+--
+DROP TABLE players CASCADE CONSTRAINTS;
+DROP TABLE game CASCADE CONSTRAINTS;
+DROP TABLE properties CASCADE CONSTRAINTS;
+DROP TABLE special_properties CASCADE CONSTRAINTS;
+DROP TABLE special_spaces CASCADE CONSTRAINTS;
+DROP TABLE plays CASCADE CONSTRAINTS;
+DROP TABLE rent CASCADE CONSTRAINTS;
+--
+-- Create tables
+--
+CREATE TABLE players (
+	username	varchar2(15) PRIMARY KEY,
+	bankaccount	
+	gamepiece 
+	password
+	firstname	char(),
+	lastname	char()
+);
+--
+CREATE TABLE game (
+	gameID
+	gamerules
+	playersingame
+);
+--
+CREATE TABLE properties (
+	propertyname
+	mortgagevalue
+	rentperhouse
+	price
+	renthouseprice
+	location
+);
+--
+CREATE TABLE special_properties (
+	location	
+	rent		number,
+	price		number,
+	propertype
+);
+--
+CREATE TABLE special_spaces (
+	locationnumber
+	spacetype
+);
+--
+CREATE TABLE plays (
+	PRIMARY KEY (username, gameID)
+);
+--
+CREATE TABLE rent (
+	primary key (
+		username
+		rentamt number)
+);
+
 SET FEEDBACK OFF
 
 --< The INSERT statements that populate the tables>
